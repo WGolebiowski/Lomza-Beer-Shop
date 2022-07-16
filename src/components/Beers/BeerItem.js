@@ -1,8 +1,22 @@
+import { useContext } from "react";
+
 import BeerItemForm from "./BeerItemForm";
 import classes from "./BeerItem.module.css";
+import CartContext from "../../store/cart-context";
 
 const BeerItem = (props) => {
+  const cartCtx = useContext(CartContext);
+
   const price = `${props.price.toFixed(2)} zł`;
+
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.name,
+      amount: amount,
+      price: props.price,
+    });
+  };
 
   return (
     <li className={classes.beer}>
@@ -12,7 +26,7 @@ const BeerItem = (props) => {
         <div className={classes.price}>{price}</div>
       </div>
       <div>
-        <BeerItemForm />
+        <BeerItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );

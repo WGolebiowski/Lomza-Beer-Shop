@@ -33,6 +33,7 @@ const BeersList = (props) => {
   const beersList = BEERS_DATA.map((beer) => (
     <BeerItem
       key={beer.id}
+      id={beer.id}
       name={beer.name}
       description={beer.description}
       price={beer.price}
