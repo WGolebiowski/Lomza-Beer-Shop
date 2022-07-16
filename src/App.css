@@ -1,21 +1,14 @@
 .App {
   text-align: center;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(16, 40, 3, 1) 0%,
-    rgba(14, 122, 26, 0.9920343137254902) 46%,
-    rgba(35, 179, 18, 1) 100%
-  );
 }
 
 section {
   margin: 1rem auto;
   width: 90%;
   max-width: 40rem;
-  text-align: center;
+  /* text-align: center; */
   background-color: white;
-  padding: 2rem;
+  /* padding: 2rem; */
   border-radius: 12px;
 }
 
@@ -25,7 +18,7 @@ button {
   background: #230052;
   border: 1px solid #230052;
   color: white;
-  padding: 0.75rem 2rem;
+  /* padding: 0.75rem 2rem; */
   border-radius: 20px;
 }
 

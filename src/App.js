@@ -20,16 +20,14 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <CartProvider>
-        {cartIsShown && <Cart onHideCart={hideCartHandler} />}
-        <Header onShowCart={showCartHandler} />
-        <HeaderText />
-        <main>
-          <Beers />
-        </main>
-      </CartProvider>
-    </div>
+    <CartProvider>
+      {cartIsShown && <Cart onHideCart={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
+      <HeaderText />
+      <main>
+        <Beers />
+      </main>
+    </CartProvider>
   );
 }
 
